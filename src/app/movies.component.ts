@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MoviesService } from './movies.service';
 
 @Component({
     selector: 'movies',
@@ -14,7 +15,11 @@ import { Component } from '@angular/core';
 
 export class MoviesComponent {
     title = 'I Love Movies';
-    movies = ['The Big Lebowski', 'The Fifth Element', 'High Fidelity']
+    movies;
+
+    constructor(service: MoviesService) {
+        this.movies = service.getMovies();
+    }
 
     getTitle() {
         return this.title;
