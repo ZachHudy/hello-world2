@@ -3,7 +3,7 @@ import { MoviesService } from './movies.service';
 
 @Component({
     selector: 'movies',
-    template: `<h2>{{ title }}</h2>
+    template: `<h2>{{ getTitle() }}</h2>
                 <ul>
                     <li *ngFor="let movie of movies">
                         {{ movie }}
