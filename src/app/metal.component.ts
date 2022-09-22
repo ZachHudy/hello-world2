@@ -14,7 +14,7 @@ import { MetalService } from './metal.service';
 })
 
 export class MetalComponent {
-    title = 'YOU CANNOT KILL THE METAL';
+    title = 'YOU CANNOT KILL THE METAL: The Metal Will Live On';
     metals;
 
     constructor(service: MetalService) {
